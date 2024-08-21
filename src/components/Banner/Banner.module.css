@@ -1,0 +1,51 @@
+.banner {
+  @apply grid grid-rows-3 sm:grid-rows-4 grid-cols-7 h-[600px] sm:h-96 rounded overflow-hidden;
+
+  /* display: grid !important; */
+
+  :first-child {
+    grid-column: 1 / 7 span;
+    grid-row: 1;
+  }
+
+  :nth-child(2) {
+    grid-column: 1 / 7 span;
+    grid-row: 2;
+  }
+
+  :last-child {
+    grid-column: 1 / 7 span;
+    grid-row: 3;
+  }
+
+  @media (min-width: 640px) {
+    :first-child {
+      grid-column: 1 / 4 span;
+      grid-row: 1 / 4 span;
+    }
+
+    :nth-child(2) {
+      grid-column: 5 / 6 span;
+      grid-row: 1 / 2 span;
+    }
+
+    :last-child {
+      grid-column: 5 / 6 span;
+      grid-row: 3 / 4 span;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :first-child {
+      grid-column: 1 / 5 span;
+    }
+
+    :nth-child(2) {
+      grid-column: 6 / 7 span;
+    }
+
+    :last-child {
+      grid-column: 6 / 7 span;
+    }
+  }
+}

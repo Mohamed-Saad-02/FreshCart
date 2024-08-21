@@ -5,8 +5,6 @@ function useCart() {
   const { isLoading, data, error } = useQuery({
     queryKey: ["cart"],
     queryFn: getCart,
-    retry: true,
-    retryDelay: 5000,
   });
 
   return { isLoading, data, error };

@@ -27,6 +27,7 @@ function Login() {
     if (data.message === "success") {
       toast.success(`Welcome ${data.user.name}`);
       handleUserInfo(data);
+
       navigate("/", { replace: true });
     } else toast.error(data.message);
   };
@@ -40,11 +41,6 @@ function Login() {
           className="border-gray-400 text-gray-900 text-sm rounded-lg focus:border-main-color block w-full p-2.5 outline-none border"
           {...register("email", {
             required: "This field is required",
-            pattern: {
-              value:
-                /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i,
-              message: "Please write a valid Email",
-            },
           })}
         />
       </FormRow>
@@ -55,11 +51,6 @@ function Login() {
           className="border-gray-400 text-gray-900 text-sm rounded-lg focus:border-main-color block w-full p-2.5 outline-none border"
           {...register("password", {
             required: "This field is required",
-            pattern: {
-              value: /^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$/,
-              message:
-                "Password has a minimum of 6 characters, at least 1 uppercase letter, 1 lowercase letter, and 1 number with no spaces.",
-            },
           })}
         />
       </FormRow>

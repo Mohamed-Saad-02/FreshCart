@@ -140,7 +140,7 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <ProtectedAuth>
-        <AuthLayout />,
+        <AuthLayout />
       </ProtectedAuth>
     ),
     children: [

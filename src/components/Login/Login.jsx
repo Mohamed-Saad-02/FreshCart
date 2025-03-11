@@ -18,7 +18,12 @@ function Login() {
     handleSubmit,
     register,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      email: "demo.demo@demo.com",
+      password: "01107246820Mw",
+    },
+  });
 
   const loginUser = async (formData) => {
     setIsLoading(true);
@@ -27,6 +32,7 @@ function Login() {
     if (data.message === "success") {
       toast.success(`Welcome ${data.user.name}`);
       handleUserInfo(data);
+      localStorage.setItem("access_token", data.token);
 
       navigate("/", { replace: true });
     } else toast.error(data.message);

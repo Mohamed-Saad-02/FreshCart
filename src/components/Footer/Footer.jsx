@@ -87,8 +87,9 @@ function Footer() {
             <div>
               Project Created By 💙{" "}
               <a
-                href="www.linkedin.com/in/mohamed-saad-6a8248354"
+                href="https://www.linkedin.com/in/mohamed-saad-6a8248354"
                 target="_blank"
+                rel="noreferrer"
                 className="underline hover:no-underline"
               >
                 Mohamed Saad

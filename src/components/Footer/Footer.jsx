@@ -81,6 +81,20 @@ function Footer() {
               />
             </div>
           </div>
+
+          {/* Info */}
+          <div className="flex items-center gap-3">
+            <div>
+              Project Created By 💙{" "}
+              <a
+                href="www.linkedin.com/in/mohamed-saad-6a8248354"
+                target="_blank"
+                className="underline hover:no-underline"
+              >
+                Mohamed Saad
+              </a>
+            </div>
+          </div>
         </div>
       </Container>
     </footer>
